@@ -10,6 +10,9 @@ const User = require("./User.model")
 User.hasMany(Board)
 Board.belongsTo(User)
 
+Board.belongsToMany(Cheese, {through:  "Board_Cheese" })
+Cheese.belongsToMany(Board, {through:  "Board_Cheese" })
+
 module.exports = {
     Board, 
     Cheese, 

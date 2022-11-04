@@ -10,13 +10,14 @@ User.init({
         autoIncrement: true
     },
     name: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
+        allowNull: false
     },
     email: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
+        allowNull: false
     }
 },   {sequelize: db})
-
 
 
 module.exports = User
