@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize")
-const { db } = require("./db")
+const db = require("./db")
 
 class Cheese extends Model { }
 
@@ -12,4 +12,4 @@ Cheese.init({
     }
 },   {sequelize: db})
 
-module.exports = {Cheese}
+module.exports = Cheese
