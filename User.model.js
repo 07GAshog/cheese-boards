@@ -1,17 +1,19 @@
-const { Model, Datatypes } = require("sequelize")
+const { Model, DataTypes } = require("sequelize")
 const { db } = require("./db")
 
 class User extends Model { }
 
 User.init({
     name: {
-        type: Datatypes.TEXT,
+        type: DataTypes.TEXT,
         primaryKey: true
     },
     email: {
-        type: Datatypes.TEXT
+        type: DataTypes.TEXT
     }
-})
+},   {sequelize: db})
+
+module.exports = {User}
 
 // Planet.init({
 //     name: {

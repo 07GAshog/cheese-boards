@@ -1,16 +1,18 @@
-const { Model, Datatypes } = require("sequelize")
+const { Model, DataTypes } = require("sequelize")
 const { db } = require("./db")
 
 class Board extends Model{}
 
 Board.init({
     type: {
-        type: Datatypes.TEXT
+        type: DataTypes.TEXT
     },
     description: {
-        type: Datatypes.TEXT
+        type: DataTypes.TEXT
     },
     rating: {
-        type: Datatypes.INTEGER
+        type: DataTypes.INTEGER
     }
-})
+},   {sequelize: db})
+
+module.exports = {Board}
